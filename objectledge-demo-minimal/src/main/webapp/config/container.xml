@@ -69,17 +69,10 @@
 
   <!-- // dispatchers ///////////////////////////////////////////////////////////////////// -->
     
-  <component class="org.objectledge.web.dispatcher.PipelineHttpDispatcher">
+  <component class="org.objectledge.web.dispatcher.PipelineHttpDispatcher"
+             class-key="org.objectledge.web.HttpDispatcher">
     <parameter class-key="org.objectledge.pipeline.ErrorHandlingPipeline"/>         
     <parameter/>
   </component>
-    
-  <component class-key="org.objectledge.web.HttpDispatcher" 
-             class="org.objectledge.web.dispatcher.SelectorHttpDispatcher">
-    <parameter/>
-    <sequence>
-      <parameter class-key="org.objectledge.web.dispatcher.PipelineHttpDispatcher"/>
-    </sequence>
-  </component>
-    
+
 </container>
