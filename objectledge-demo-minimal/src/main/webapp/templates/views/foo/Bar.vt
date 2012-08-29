@@ -1,4 +1,5 @@
 <div id="foo-Bar">
 	foo/Bar <br/>
-	<a href="$link.view('foo.Foo')">Foo</a>
+	<a href="$link.view('foo.Foo')">Foo</a> <br/>
+	Counter: $counter <a href="$link.action('Count')"/>increment</a>
 </div>
