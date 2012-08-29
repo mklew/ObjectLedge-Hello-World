@@ -1,3 +1,4 @@
+$pageTool.insertTitlePrefix('demo :: ')##
 <div id="foo-Default">
 	foo/Default <br/>
 	$!embeddedPlaceholder##
