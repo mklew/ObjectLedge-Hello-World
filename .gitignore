@@ -1,1 +1,7 @@
+.metadata/
 target/
+.classpath
+.project
+.settings/
+.repositories/
+*~
