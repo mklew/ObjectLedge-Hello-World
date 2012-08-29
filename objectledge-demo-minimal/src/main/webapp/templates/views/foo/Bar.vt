@@ -1,1 +1,4 @@
-foo/Bar($!embeddedPlaceholder)
+<div id="foo-Bar">
+	foo/Bar <br/>
+	<a href="$link.view('foo.Foo')">Foo</a>
+</div>

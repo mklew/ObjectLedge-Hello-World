@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div id="page">
-			$embeddedPlaceholder		
+			$embeddedPlaceholder##		
 		</div>
     </body>
 </html>

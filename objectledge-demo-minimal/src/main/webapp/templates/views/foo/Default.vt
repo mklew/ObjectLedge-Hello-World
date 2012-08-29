@@ -1,1 +1,4 @@
-foo/Default($!embeddedPlaceholder)
+<div id="foo-Default">
+	foo/Default <br/>
+	$!embeddedPlaceholder##
+</div>
