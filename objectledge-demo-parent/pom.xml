@@ -6,6 +6,10 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <modules>
+    <module>../objectledge-demo-minimal</module>
+  </modules>
+
   <properties>
     <versions.ledge>1.0.14-SNAPSHOT</versions.ledge>
     <versions.junit>3.8.1</versions.junit>
