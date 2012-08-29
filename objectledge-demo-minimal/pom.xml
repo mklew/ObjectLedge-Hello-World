@@ -11,9 +11,8 @@
 
   <artifactId>objectledge-demo-minimal</artifactId>
   <packaging>war</packaging>
-
   <name>ObjectLedge minimal demo project</name>
-  <url>https://github.com/mklew/ObjectLedge-Hello-World</url>
+
 
   <dependencies>
     <dependency>
