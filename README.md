@@ -16,8 +16,9 @@ If you have `JDK 7` then build `feature/java7` branch.
 
 4. Once you have OL installed into your local maven repository then you can start hacking this one
 5. Fork & clone it
-6. Build it `mvn clean install`
-7. Run it `mvn jetty:run`
-8. Contribute to get it working...
+6. Build it `mvn clean install -f objectledge-demo-parent/pom.xml`
+7. Run it `mvn jetty:run -f objectledge-demo-minimal/pom.xml`
+8. Open http://localhost:8080/ in your browser
+9. Contribute to get it working...
 
 

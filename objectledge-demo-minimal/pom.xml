@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>net.mklew</groupId>
+    <artifactId>objectledge-demo-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../objectledge-demo-parent/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>objectledge-demo-minimal</artifactId>
+  <packaging>war</packaging>
+  <name>ObjectLedge minimal demo project</name>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.objectledge</groupId>
+      <artifactId>ledge-web</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <configuration>
+          <webAppConfig>
+            <contextPath>/</contextPath>
+          </webAppConfig>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
