@@ -4,21 +4,32 @@
 	    <meta charset="utf-8" />
 		<title>$pageTool.title</title>
 
+        ## Styles
+        $pageTool.addStyleLink("/bootstrap/css/bootstrap.min.css")
+
+        ## Include styles here
+        #foreach($styleLink in $pageTool.getStyleLinks())
+            <link href="$styleLink.getHref()" rel="stylesheet>
+        #end
+
 		$pageTool.addScriptLink("/js/jquery-1.8.0.js")   ## there must be a better way
-		#foreach($scriptLink in $pageTool.getScriptLinks())
-		<script src="$scriptLink.getSrc()"></script>
-		#end
-		<script>
-                	$(document).ready(function(){
-                		$('<p>jQuery works</p>').appendTo('body');
-                	});
-        </script>
+		$pageTool.addScriptLink("/bootstrap/js/bootstrap.min.js")
+
 	</head>
 	<body>
 		<div id="page">
 			$embeddedPlaceholder##		
 		</div>
-    </body>
 
+		## Include scripts here
+		#foreach($scriptLink in $pageTool.getScriptLinks())
+        	<script src="$scriptLink.getSrc()"></script>
+        #end
+        <script>
+            $(document).ready(function(){
+                $('<p>jQuery works</p>').appendTo('body');
+            });
+        </script>
+    </body>
 </html>
 $viewEnclosureTool.top()##
