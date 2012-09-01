@@ -22,11 +22,6 @@
 	                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 	                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 	        </div>
-	        <ul class="breadcrumb">
-			  <li><a href="#">Home</a> <span class="divider">/</span></li>
-			  <li><a href="#">Library</a> <span class="divider">/</span></li>
-			  <li class="active">Data</li>
-			</ul>
 			<div id="page">
 				$embeddedPlaceholder##		
 			</div>
@@ -40,6 +35,46 @@
         <script>
             $(document).ready(function(){
                 $('<h1>Hello World from jQuery</h1>').prependTo('div.hero-unit');
+            });
+            // creates breadcrumb
+            $(function(){
+                var link = "$link";
+                console.log(link);
+                //     /ledge/view/foo.Foo
+                var sites = link.replace("/ledge/view/", '').split('.');
+                console.log(sites);
+                var html = '';
+                $(sites).each(function(i, item){
+                	console.log(sites);
+                	console.log('item to ');
+                	console.log(item);
+                	var str = '';
+                	var link = [];
+                	for(var j = 0 ; j <= i ; ++j)
+                	{
+                		link[j] = sites[j] 
+                	}
+                	link = link.join('.');
+                	if(i != sites.length - 1)
+                	{
+                		console.log(sites);
+                		str = ['<li><a href="',
+                		'/ledge/view/', link, 
+                		,'">',item,'</a> <span class="divider">/</span></li>'
+                		].join('');
+                		item = str;
+                	}
+                	else
+                	{
+                		str = '<li class="active">' + item + '</li>';
+                		item = str;
+                	}
+                	html += str;
+                });
+                var ul = ['<ul class="breadcrumb">', html , '</ul'].join('');
+                console.log(ul);
+                $(ul).insertBefore('#page');
+                $('ul.breadcrumb').css('text-transform', 'capitalize');
             });
         </script>
     </body>
