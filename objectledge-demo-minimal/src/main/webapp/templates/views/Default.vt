@@ -9,7 +9,7 @@
 
         ## Include styles here
         #foreach($styleLink in $pageTool.getStyleLinks())
-            <link href="$styleLink.getHref()" rel="stylesheet>
+            <link href="$styleLink.getHref()" rel="stylesheet">
         #end
 
 		$pageTool.addScriptLink("/js/jquery-1.8.0.js")   ## there must be a better way
@@ -17,8 +17,15 @@
 
 	</head>
 	<body>
-		<div id="page">
-			$embeddedPlaceholder##		
+		<div class="container">
+		    <div class="hero-unit">
+	                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+	                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+	        </div>
+
+			<div id="page">
+				$embeddedPlaceholder##		
+			</div>
 		</div>
 
 		## Include scripts here
@@ -27,7 +34,7 @@
         #end
         <script>
             $(document).ready(function(){
-                $('<p>jQuery works</p>').appendTo('body');
+                $('<h1>Hello World from jQuery</h1>').prependTo('div.hero-unit');
             });
         </script>
     </body>
