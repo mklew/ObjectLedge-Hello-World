@@ -1,5 +1,9 @@
 $pageTool.setTitle('Foo')##
 <div id="foo-Bar">
 	foo/Foo <br>
-	<a href="$link.view('foo.Bar')">Bar</a>
+    <ul>
+        <li><a href="$link.view('foo.Bar')">Bar</a></li>
+        <li><a href="$link.view('foo.barfoo')">barfoo</a></li>
+        <li><a href="$link.view('foo.barfoo.barfoo')">barfoobarfoo</a></li>
+    </ul>
 </div>

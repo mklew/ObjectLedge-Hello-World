@@ -22,10 +22,15 @@
 	                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 	                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 	        </div>
-
+	        <ul class="breadcrumb">
+			  <li><a href="#">Home</a> <span class="divider">/</span></li>
+			  <li><a href="#">Library</a> <span class="divider">/</span></li>
+			  <li class="active">Data</li>
+			</ul>
 			<div id="page">
 				$embeddedPlaceholder##		
 			</div>
+			<p>Default $link </p>
 		</div>
 
 		## Include scripts here
