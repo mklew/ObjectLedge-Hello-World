@@ -1,6 +1,26 @@
 ObjectLedge Hello World
 =======================
 
+HTML5-Bootstrap-jQuery
+-----------------------
+Simple modifications were added.
+
+From this example you can learn how to:
+
+* include scripts. It is really ugly way and I hope there is better solution.
+* benefit from link object 
+* create breadcrumb with pure javascript.
+* use jQuery ready functions in two flavours
+* manipulate DOM, create and insert new elements
+
+Also some things for your consideration. These can be treated like potential issues
+
+* Templates names must start with capital letter. Otherwise it is not working
+* Nested views are represented by url containing dots like foo.bar.barfoo which is something I would like to change but don't know how.
+* Including scripts looks bad and there should be easier way like `$pageTool.styles` and `$pageTool.scripts`
+
+--------------
+
 Main goal of this project is to provide quickstart for more advanced development using ObjectLedge framework.
 
 Ultimate goal is to turn this into Maven archetype as soon as... it starts working.
