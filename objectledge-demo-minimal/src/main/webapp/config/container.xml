@@ -72,11 +72,10 @@
   </component>
 
   <!-- // dispatchers ///////////////////////////////////////////////////////////////////// -->
-    
-  <component class="org.objectledge.web.dispatcher.PipelineHttpDispatcher"
-             class-key="org.objectledge.web.HttpDispatcher">
-    <parameter class-key="org.objectledge.pipeline.ErrorHandlingPipeline"/>         
-    <parameter/>
+
+  <component class="org.objectledge.web.dispatcher.PipelineHttpDispatcher" key="main">
+    <parameter class-key="org.objectledge.pipeline.ErrorHandlingPipeline" />
+    <parameter />
   </component>
 
 </container>
