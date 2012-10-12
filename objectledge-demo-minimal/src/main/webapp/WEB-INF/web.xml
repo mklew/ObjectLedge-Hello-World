@@ -33,6 +33,11 @@
         <url-pattern>/ledge/*</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>rest</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
