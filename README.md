@@ -22,3 +22,8 @@ If you want to use `JDK 7` and latest version of ObjectLedge then build `dev` br
 9. Run it `mvn jetty:run -f objectledge-demo-minimal/pom.xml`
 10. Open http://localhost:8080/ in your browser
 11. Contribute to get it working...
+
+
+Examples
+------------
+For REST services example see `rest` branch
