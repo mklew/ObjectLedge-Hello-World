@@ -49,6 +49,10 @@
         </sequence>
     </component>
 
+    <component class-key="org.objectledge.web.rest.JerseyRestValve" class="org.objectledge.web.rest.JerseyRestValve">
+
+    </component>
+
     <!-- // pipeline //////////////////////////////////////////////////////////////////////// -->
 
     <component class="org.objectledge.pipeline.ErrorHandlingPipeline">
@@ -71,6 +75,12 @@
         </sequence>
     </component>
 
+    <component class="org.objectledge.pipeline.SimplePipeline" key="restPipeline">
+        <sequence>
+            <parameter class-key="org.objectledge.web.rest.JerseyRestValve"/>
+        </sequence>
+    </component>
+
     <!-- // dispatchers ///////////////////////////////////////////////////////////////////// -->
 
     <component class="org.objectledge.web.dispatcher.PipelineHttpDispatcher" key="main">
@@ -78,5 +88,8 @@
         <parameter/>
     </component>
 
-
+    <component class="org.objectledge.web.dispatcher.PipelineHttpDispatcher" key="restDispatcher">
+        <parameter key="restPipeline"/>
+        <parameter/>
+    </component>
 </container>
