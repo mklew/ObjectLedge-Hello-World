@@ -13,6 +13,7 @@
   <modules>
     <module>../objectledge-demo-minimal</module>
     <module>../objectledge-demo-rest</module>
+    <module>../objectledge-demo-security</module>
   </modules>
 
   <properties>
