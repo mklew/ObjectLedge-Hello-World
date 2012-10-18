@@ -1,22 +1,3 @@
-ObjectLedge REST example
-======================
-
-Step by step explanation
-
-1. In `web.xml` new LedgeServlet was mapped to path handling rest requests
-2. Name of servlet's dispatcher has to correspond to some Dispatcher component
-3. In this example `PipelineHttpDispatcher` was used which takes restPipeline and context(provided by pico) as parameters
-4. restPipeline is `SimplePipeline` which just processes requests with no error handling. `ErrorHandlingPipeline` could be used instead.
-5. restPipeline has just one valve and that is `JerseyRestValve`
-6. `JerseyRestValve` has its configuration in `org.objectledge.web.rest.JerseyRestValve.xml`
-7. Jersey will scan for rest services in configured package
-8. There is only one service mapped to `/hello` path which serves Hello World response.
-
-Try it:
-
-     1. Run it as `jetty:run`
-     2. http://localhost:8080/rest/hello
-
 ObjectLedge Hello World
 =======================
 
@@ -44,5 +25,32 @@ If you want to use `JDK 7` and latest version of ObjectLedge then build `dev` br
 
 
 Examples
-------------
-For REST services example see `rest` branch
+==========
+
+ObjectLedge Minimal example
+=========================
+
+    Demonstrates (almost) minimal structure needed for ObjectLedge application
+    - Shows usage of action, view
+    - Shows how to create component and put it into container
+
+    Run it `mvn jetty:run -f objectledge-demo-minimal/pom.xml`
+
+ObjectLedge REST example
+======================
+
+Step by step explanation
+
+1. In `web.xml` new LedgeServlet was mapped to path handling rest requests
+2. Name of servlet's dispatcher has to correspond to some Dispatcher component
+3. In this example `PipelineHttpDispatcher` was used which takes restPipeline and context(provided by pico) as parameters
+4. restPipeline is `SimplePipeline` which just processes requests with no error handling. `ErrorHandlingPipeline` could be used instead.
+5. restPipeline has just one valve and that is `JerseyRestValve`
+6. `JerseyRestValve` has its configuration in `org.objectledge.web.rest.JerseyRestValve.xml`
+7. Jersey will scan for rest services in configured package
+8. There is only one service mapped to `/hello` path which serves Hello World response.
+
+Try it:
+
+     1. Run it `mvn jetty:run -f objectledge-demo-rest/pom.xml`
+     2. http://localhost:8080/rest/hello
