@@ -12,6 +12,7 @@
 
   <modules>
     <module>../objectledge-demo-minimal</module>
+    <module>../objectledge-demo-rest</module>
   </modules>
 
   <properties>
