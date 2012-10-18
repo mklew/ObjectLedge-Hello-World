@@ -4,6 +4,11 @@
 <web-app>
     <display-name>Objectledge security demo</display-name>
 
+    <context-param>
+        <param-name>shiroConfigLocations</param-name>
+        <param-value>/config/shiro.ini</param-value>
+    </context-param>
+
     <listener>
         <listener-class>org.objectledge.web.LedgeServletContextListener</listener-class>
     </listener>
