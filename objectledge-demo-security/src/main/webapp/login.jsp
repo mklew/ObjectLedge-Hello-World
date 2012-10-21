@@ -37,7 +37,7 @@
 	<input type="password" name="password" value=""
     data-dojo-type="dijit/form/TextBox"
     data-dojo-props="trim:true, propercase:true" id="password"/>
-	<button data-dojo-type="dijit/from/Button" type="submit">Login</button>
+	<button data-dojo-type="dijit/form/Button" type="submit">Login</button>
 </form>
 </div>
 
