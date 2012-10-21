@@ -54,3 +54,27 @@ Try it:
 
      1. Run it `mvn jetty:run -f objectledge-demo-rest/pom.xml`
      2. http://localhost:8080/rest/hello
+
+ObjectLedge Security example
+============================
+
+This example uses extremely awesome Apache Shiro security framework.
+
+ Some light on things:
+ 1. In `web.xml` context variable, filter and listener for Shiro is added. These are pretty much excerpts from Shiro documentation.
+ 2. `webapp/config` there's shiro.ini file which configures simple realm
+ It also configures form based authentication
+ 3. `login.jsp` (name from shiro.ini) does the authentication job
+ 4. Every path is secured by Shiro. That's configured in `web.xml`
+
+  To test:
+  1. Go to any url ( no view template will be thrown after logon but that does not matter)
+  2. Login page should popup
+  3. Login with username: `root` and password: `12345`
+  4. See that your redirected to desired url
+
+ This example is not yet done.
+ TODO
+ * Create more permissions
+ * Secure resource with annotations
+ * Create Valve which added somewhere to pipeline adds Subject to Context
