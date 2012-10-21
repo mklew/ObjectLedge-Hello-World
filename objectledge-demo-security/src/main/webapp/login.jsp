@@ -31,12 +31,12 @@
 		<label for="username">Username</label>
 		<input type="text" name="username" value="username"
     data-dojo-type="dijit/form/TextBox"
-    data-dojo-props="trim:true, propercase:true" id="username" />
+    data-dojo-props="trim:true" id="username" />
 
     <label for="password">Password</label>
 	<input type="password" name="password" value=""
     data-dojo-type="dijit/form/TextBox"
-    data-dojo-props="trim:true, propercase:true" id="password"/>
+    data-dojo-props="trim:true" id="password"/>
 	<button data-dojo-type="dijit/form/Button" type="submit">Login</button>
 </form>
 </div>
