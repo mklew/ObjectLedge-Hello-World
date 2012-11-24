@@ -2,6 +2,8 @@
 <container xmlns="http://objectledge.org/container/1.0">
 
     <component class="net.mklew.demo.Counter"/>
+    <component key="net.mklew.demo.Hello"
+               class="net.mklew.demo.HelloBean"/>
 
     <!-- // valves ////////////////////////////////////////////////////////////////////// -->
 
@@ -80,6 +82,9 @@
             <parameter class-key="org.objectledge.web.rest.JerseyRestValve"/>
         </sequence>
     </component>
+
+    <!-- // jersey resources //////////////////////////////////////////////////////////////// -->
+    <component class="net.mklew.rest.HelloRest"/>
 
     <!-- // dispatchers ///////////////////////////////////////////////////////////////////// -->
 
